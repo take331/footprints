@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>try...catch</h1>
+    <script>
+        // try...catch
+        console.log("<try...catch>")
+        try {
+            // try内でエラーが発生するとcatchに移る
+            console.log("OK");
+            // 未定義の関数を実行
+            undefinedFunc();
+            console.log("NO");
+        } catch(error) {
+            console.log(`error:${error}`);
+        } finally {
+            // finallyはエラーの発生に関わらず必ず実行
+            console.log("Finally!!");
+        }
+
+        // throw
+        console.log("<throw>");
+        // throww文を使って例外を投げる
+        try {
+            console.log("foo");
+            throw new Error("例外発生");
+        } catch(error) {
+            console.log(error);
+        } finally {
+            console.log("bar");
+        }
+
+        // throw builtinError
+        function reverseString(str) {
+            if (typeof str !== "string") {
+                    throw new TypeError(`${str} is not string`);
+            }
+            return Array.from(str).reverse().join("");
+        }
+        try {
+            console.log(reverseString("hello world"));
+        } catch(error) {
+            console.log(`${error.name}: ${error.message}`);
+        }
+
+        // console.error
+        console.log("<console.error>");
+        function func() {
+            console.log("error");
+            // console.error()はスタックトレースを表示する
+            console.error("error message");
+        }
+        func();
+    </script>
+</body>
+</html>
