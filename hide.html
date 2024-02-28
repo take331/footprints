@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide</title>
+</head>
+<body>
+    <p id="message">Sample Message</p>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <script>
+        const message = document.querySelector("#message");
+        const showBtn = document.querySelector("#show");
+        const hideBtn = document.querySelector("#hide");
+
+        showBtn.addEventListener("click", () => {
+            message.style.display = "block";
+        })
+        hideBtn.addEventListener("click", () => {
+            message.style.display = "none";
+        })
+    </script>
+</body>
+</html>
