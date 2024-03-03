@@ -37,3 +37,24 @@ GitHubのローカルリポジトリで作業を行っているとき、この�
 ローカルリポジトリにおける変更をほかの開発者に通知する操作
 ### インデックス
 ファイルの保管場所にコミットするためのファイルを登録すること
+
+##　コマンド
+### 初期化
+ローカルリポジトリを作成する
+`git init`
+### 記録
+変更内容をステージに上げ、リポジトリに反映する
+`git add .`
+`git commit -m "commit message"`
+
+## 状況確認
+`git diff`
+`git diff -stage`
+`git status`
+
+## 履歴の確認
+`git log`
+
+## もとに戻す
+`git restore file_name`
+`git restore -stage file_name`
