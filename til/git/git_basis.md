@@ -58,3 +58,16 @@ GitHubのローカルリポジトリで作業を行っているとき、この�
 ## もとに戻す
 `git restore file_name`
 `git restore -stage file_name`
+
+
+## Flow
+1. github上でリモートリポジトリを作成
+2. パスをコピーして、`git clone`
+3. `git init`でローカルリポジトリを作成
+4. `git add [filename]`でステージング
+5. `git remote add [path]`
+6. `git checkout -b [repository name]`でブランチの作成と移動
+7. `git commit -m "commit message"` でコミット
+8. `git push [repository name] [branch name]`でプッシュ
+9. `git checkout main`でmainブランチに移動
+10. `git checkout -D [branch name]`でブランチを削除
